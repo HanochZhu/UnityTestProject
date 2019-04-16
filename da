@@ -1,0 +1,29 @@
+[1mdiff --git a/CombineMesh/README.md b/CombineMesh/README.md[m
+[1mindex 31f2f97..d1ebf07 100644[m
+[1m--- a/CombineMesh/README.md[m
+[1m+++ b/CombineMesh/README.md[m
+[36m@@ -1,3 +1,4 @@[m
+ # introduce[m
+ this project is test of unity mesh combine. mesh combine is a kind of technology that can optimistic rendering.[m
+[31m-poor english descirpt, forgive me.[m
+\ No newline at end of file[m
+[32m+[m[32mpoor descirptive ability in english, forgive me.[m
+[41m+[m
+[1mdiff --git a/README.md b/README.md[m
+[1mindex 132d16c..77895a9 100644[m
+[1m--- a/README.md[m
+[1m+++ b/README.md[m
+[36m@@ -1,2 +1,13 @@[m
+ # UnityTestProject[m
+ Some Test Project of Unity 3D engine[m
+[32m+[m
+[32m+[m[32m# my test plan[m
+[32m+[m
+[32m+[m[32m- 实现弹簧质点算法[m[41m [m
+[32m+[m[32m- 优化人脸重建算法[m[41m [m
+[32m+[m[32m- unity画长毛的兔子[m
+[32m+[m[32m- 染发app[m
+[32m+[m[32m- 照片合并算法[m
+[32m+[m[32m- 马尔科夫链 蓝战非胜率预测 √[m
+[32m+[m[32m- 牛顿下降迭代 √[m
+[41m+[m
