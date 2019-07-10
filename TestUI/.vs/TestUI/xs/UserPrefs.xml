@@ -1,0 +1,34 @@
+﻿<Properties StartupConfiguration="{96436FB6-5538-213D-088B-30DDFA230C4B}|">
+  <MonoDevelop.Ide.Workbench ActiveDocument="../../../Library/Unity/cache/packages/packages.unity.com/com.unity.render-pipelines.lightweight@3.0.0-preview/LWRP/Data/LightweightPipelineAsset.cs">
+    <Files>
+      <File FileName="Assets/Scripts/TestUI.cs" Line="10" Column="33" />
+      <File FileName="Assets/Scripts/SRP/BaseScriptPIpeline.cs" Line="21" Column="24" />
+      <File FileName="../../../Library/Unity/cache/packages/packages.unity.com/com.unity.render-pipelines.lightweight@3.0.0-preview/LWRP/Data/LightweightPipelineAsset.cs" Line="179" Column="43" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="TestUI" expanded="True">
+            <Node name="Assets" expanded="True">
+              <Node name="Scripts" expanded="True">
+                <Node name="SRP" expanded="True">
+                  <Node name="BaseScriptPIpeline.cs" selected="True" />
+                </Node>
+              </Node>
+              <Node name="TestCompiler" expanded="True">
+                <Node name="Editor" expanded="True" />
+              </Node>
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="602acbca-55db-4e73-b78f-e5e4dedc54fe" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>

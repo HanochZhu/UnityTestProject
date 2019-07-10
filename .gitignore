@@ -1,0 +1,7 @@
+# ignore file in repository
+*.sln
+# ignore folder
+Library/
+Temp/
+.vs/
+
