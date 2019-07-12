@@ -27,6 +27,7 @@ public class BaseScriptPIpeline : RenderPipelineAsset
 internal class BasicPipeInstance : RenderPipeline
 {
     private Color screenColor;
+    private bool stereoEnable = false;
 
     public BasicPipeInstance(Color screenColor)
     {
@@ -35,14 +36,63 @@ internal class BasicPipeInstance : RenderPipeline
 
     public override void Render(ScriptableRenderContext renderContext, Camera[] cameras)
     {
-        //
-        //culling
+
+
+        //example
         base.Render(renderContext, cameras);
         //core 核心 1设置渲染操作，2执行渲染操作，3上传渲染操作
-        var cmd = new CommandBuffer();
-        cmd.ClearRenderTarget(true, true, screenColor);//1
-        renderContext.ExecuteCommandBuffer(cmd);//2
-        cmd.Release();
+        //var cmd = new CommandBuffer();
+
+        //culling
+        ScriptableCullingParameters cullingParams;
+        Debug.Log(cameras[0].name);
+        if (!CullResults.GetCullingParameters(Camera.main, stereoEnable,out cullingParams))
+        {
+            return;
+        }
+
+        cullingParams.isOrthographic = true;
+        CullResults cullResults = new CullResults();
+        CullResults.Cull(ref cullingParams, renderContext, ref cullResults);
+        
+        List<VisibleLight> lights = cullResults.visibleLights;
+        foreach (var item in lights)
+        {
+            if (item.lightType == LightType.Directional)//设置直射光 
+            {
+                Vector4 dir = -item.localToWorld.GetColumn(2);
+                Shader.SetGlobalVector("LightColor0", item.finalColor);
+                Shader.SetGlobalVector("WorldSpaceLightPos0", item.finalColor);
+                break;
+            }
+        }
+        //end culling
+
+        //filter
+        var opaqueRange = new FilterRenderersSettings();
+        opaqueRange.renderQueueRange = new RenderQueueRange()
+        {
+            min = 0,
+            max = (int)UnityEngine.Rendering.RenderQueue.GeometryLast,
+        };
+
+        opaqueRange.layerMask = ~0;
+
+        //end filter
+
+        //draw
+        var drs = new DrawRendererSettings(Camera.main, new ShaderPassName("Opaque"));
+        drs.flags = DrawRendererFlags.EnableInstancing;
+        drs.rendererConfiguration = RendererConfiguration.PerObjectLightProbe | RendererConfiguration.PerObjectLightmaps;
+        drs.sorting.flags = SortFlags.CommonOpaque;
+        //draw!!!
+        renderContext.DrawRenderers(cullResults.visibleRenderers, ref drs, opaqueRange);
+
+        //end draw
+        //cmd.DrawRenderer(renderContext, new Material());
+        //cmd.ClearRenderTarget(true, true, screenColor);//1
+        //renderContext.ExecuteCommandBuffer(cmd);//2
+        //cmd.Release();
         renderContext.Submit();//3
     }
 }

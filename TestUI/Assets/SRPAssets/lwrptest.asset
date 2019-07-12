@@ -11,4 +11,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 84157931d3cec4c34af8e633b5b795a9, type: 3}
   m_Name: lwrptest
   m_EditorClassIdentifier: 
-  screenColor: {r: 0.6698113, g: 0.42021182, b: 0.42021182, a: 1}
+  screenColor: {r: 0.6901961, g: 0.61968577, b: 0.33333334, a: 1}
