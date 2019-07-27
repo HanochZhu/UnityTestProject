@@ -10,4 +10,4 @@ Some Test Project of Unity 3D engine
 - 照片合并算法
 - 马尔科夫链 蓝战非胜率预测 √
 - 牛顿下降迭代 √
-
+- unity下鱼竿物理模拟 √
