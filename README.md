@@ -8,6 +8,6 @@ Some Test Project of Unity 3D engine
 - [unity画长毛的兔子](https://github.com/ThisskyMain/FurBunny) √
 - 染发app
 - 照片合并算法
-- 马尔科夫链 蓝战非胜率预测 √
-- 牛顿下降迭代 √
+- [马尔科夫链 蓝战非胜率预测 √](https://github.com/HanochZhu/MyAlgorithm/tree/master/Markov)
+- [牛顿下降迭代 √](https://github.com/HanochZhu/MyAlgorithm/tree/master/NewtonMathod)
 - unity下鱼竿物理模拟 √
