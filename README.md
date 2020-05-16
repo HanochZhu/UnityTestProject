@@ -3,7 +3,7 @@ Some Test Project of Unity 3D engine
 
 # my test plan
 
-- 实现弹簧质点算法 
+- [实现弹簧质点算法](https://github.com/HanochZhu/PhysicSimulation) 
 - 优化人脸重建算法 
 - [unity画长毛的兔子](https://github.com/ThisskyMain/FurBunny) √
 - 染发app
